@@ -10,21 +10,30 @@ public class Program
     /**
      * This is the main entry point for the application
      */
-	System.out.println ("Hello World");
     
     public static void main(String args[]) 
     {
         String result;
+        
         System.out.println("Welcome to the Movie Store");
+        
         Movie m1 = new Movie("movie1", 1);
         Movie m2 = new Movie("movie2", 2);
         Rental r1 = new Rental(m1, 10);
         Rental r2 = new Rental(m2, 5);
-        Customer c1 = new Customer("joe");
-        c1.addRental(r1);   c1.addRental(r2);   
+        Customer c1 = new Customer("joe"); 
+        c1.addRental(r1); 
+        c1.addRental(r2);   
+        
         System.out.println("Let's get the Statement");
         result = c1.statement();
         System.out.println(result);
+        
+        Shoptester Franz = new Shoptester();
+        Franz.tester01();
+        Franz.tester02();
+        Franz.tester03();
+    
     }
 }
 
