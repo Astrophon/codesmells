@@ -16,16 +16,16 @@ public class Program
         
         System.out.println("Welcome to the Movie Store");
         
-        Movie m1 = new Movie("movie1", 1);
-        Movie m2 = new Movie("movie2", 2);
-        Rental r1 = new Rental(m1, 10);
-        Rental r2 = new Rental(m2, 5);
-        Customer c1 = new Customer("joe"); 
-        c1.addRental(r1); 
-        c1.addRental(r2);   
+        Movie movie01 = new Movie("movie1", 1);
+        Movie movie02 = new Movie("movie2", 2);
+        Rental rental01 = new Rental(movie01, 10);
+        Rental rental02 = new Rental(movie02, 5);
+        Customer customer01 = new Customer("joe"); 
+        customer01.addRental(rental01); 
+        customer01.addRental(rental02);   
         
         System.out.println("Let's get the Statement");
-        result = c1.statement();
+        result = customer01.statement();
         System.out.println(result);
         
         Shoptester Franz = new Shoptester();
