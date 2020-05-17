@@ -18,7 +18,7 @@ class Customer {
         return name;
     };
     
-    public String statement() {
+    public String get_all_infos() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
         Enumeration enum_rentals = rentals.elements();
@@ -30,7 +30,7 @@ class Customer {
             double thisAmount = 0;
             Rental each = (Rental) enum_rentals.nextElement();
             //determine amounts for each line
-            thisAmount = amountFor(each);
+            thisAmount = calculate_costs(each);
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
@@ -46,7 +46,7 @@ class Customer {
         return result;
     }
 
-    private double amountFor(Rental each) {
+    private double calculate_costs(Rental each) {
         double thisAmount = 0;
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:

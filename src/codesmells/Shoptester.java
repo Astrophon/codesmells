@@ -7,7 +7,7 @@ public class Shoptester {
 		Rental rental = new Rental(new Movie("Star Wars I", Movie.NEW_RELEASE), 10);
 		Customer customer = new Customer("Mueller");
 		customer.addRental(rental);
-		result = customer.statement();
+		result = customer.get_all_infos();
 		System.out.println(result);
 	}
 	
@@ -26,7 +26,7 @@ public class Shoptester {
 		customer.addRental(rental3);
 		customer.addRental(rental4);
 		
-		result = customer.statement();
+		result = customer.get_all_infos();
 		System.out.println(result);
 	}
 
@@ -36,7 +36,7 @@ public class Shoptester {
 		Rental rental = new Rental(new Movie("Star Wars VI Die Rückkehr der Jedi Ritter Extended Cut Special Edition mit Producer Kommentaren und Interviews", Movie.NEW_RELEASE), 1000000000);
 		Customer customer = new Customer("Wieland");
 		customer.addRental(rental);
-		result = customer.statement();
+		result = customer.get_all_infos();
 		System.out.println(result);
 	}
 	

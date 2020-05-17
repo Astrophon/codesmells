@@ -24,8 +24,8 @@ public class Program
         customer01.addRental(rental01); 
         customer01.addRental(rental02);   
         
-        System.out.println("Let's get the Statement");
-        result = customer01.statement();
+        System.out.println("Let's get all infos:");
+        result = customer01.get_all_infos();
         System.out.println(result);
         
         Shoptester Franz = new Shoptester();
