@@ -4,8 +4,8 @@ import java.util.*;
 
 class Customer {
     private String name;
-    private Vector rentals = new Vector();
-    private static final double RentedDaysMultiplier = 1.5;
+    private Vector<Rental> rentals = new Vector<Rental>();
+    private static double RentedDaysMultiplier = 1.5;
     
     public Customer (String newname){
         name = newname;
@@ -22,7 +22,7 @@ class Customer {
     public String get_all_infos() {
         double totalAmount = 0;
         int frequentRenterPoints = 0;
-        Enumeration enum_rentals = rentals.elements();
+        Enumeration<Rental> enum_rentals = rentals.elements();
         
         String result = "Rental Record for " + this.getName() + "\n";
         result += "\t" + "Title" + "\t" + "\t" + "Days" + "\t" + "Amount" + "\n";
