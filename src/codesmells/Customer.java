@@ -34,6 +34,7 @@ class Customer {
             // add frequent renter points
             frequentRenterPoints ++;
             // add bonus for a two day new release rental
+            assert(((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) || (each.getMovie().getPriceCode() == Movie.REGULAR) || ( each.getMovie().getPriceCode() == Movie.CHILDRENS)) && each.getDaysRented() > 0 );
             if ((each.getMovie().getPriceCode() == Movie.NEW_RELEASE) && each.getDaysRented() > 1) 
                 frequentRenterPoints ++;
             //show figures for this rental
@@ -51,6 +52,7 @@ class Customer {
         switch (each.getMovie().getPriceCode()) {
             case Movie.REGULAR:
                 thisAmount += 2;
+                assert(each.getDaysRented() > 0);
                 if (each.getDaysRented() > 2)
                     thisAmount += (each.getDaysRented() - 2) * 1.5;
                 break;
@@ -59,6 +61,7 @@ class Customer {
                 break;
             case Movie.CHILDRENS:
                 thisAmount += 1.5;
+                assert(each.getDaysRented() > 0);
                 if (each.getDaysRented() > 3)
                     thisAmount += (each.getDaysRented() - 3) * 1.5;
                 break;
