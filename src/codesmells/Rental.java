@@ -1,3 +1,4 @@
+package codesmells;
 
 
 class Rental {

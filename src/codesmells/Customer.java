@@ -1,3 +1,4 @@
+package codesmells;
 
 import java.util.*;
 

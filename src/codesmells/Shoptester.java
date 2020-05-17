@@ -1,5 +1,4 @@
-
-
+package codesmells;
 public class Shoptester {
 
 	public void tester01() {
