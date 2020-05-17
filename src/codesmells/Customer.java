@@ -5,6 +5,7 @@ import java.util.*;
 class Customer {
     private String name;
     private Vector rentals = new Vector();
+    private static final double RentedDaysMultiplier = 1.5;
     
     public Customer (String newname){
         name = newname;
@@ -54,7 +55,7 @@ class Customer {
                 thisAmount += 2;
                 assert(each.getDaysRented() > 0);
                 if (each.getDaysRented() > 2)
-                    thisAmount += (each.getDaysRented() - 2) * 1.5;
+                    thisAmount += (each.getDaysRented() - 2) * RentedDaysMultiplier;
                 break;
             case Movie.NEW_RELEASE:
                 thisAmount += each.getDaysRented() * 3;
@@ -63,7 +64,7 @@ class Customer {
                 thisAmount += 1.5;
                 assert(each.getDaysRented() > 0);
                 if (each.getDaysRented() > 3)
-                    thisAmount += (each.getDaysRented() - 3) * 1.5;
+                    thisAmount += (each.getDaysRented() - 3) * RentedDaysMultiplier;
                 break;
             default: break;
         }
